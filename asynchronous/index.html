@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: gray;
+            color: black;
+            font-size: 30;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="loader">
+        <p>Loading</p>
+    </div>
+    <div>
+        <p>my content</p>
+
+        <p id="time"></p>
+    </div>
+
+
+    <script>
+
+        // const num = [-1, 2, -3, 2, 3];
+
+        // const positiveNumbers = removeNegativeNumbers(num, function (x) {
+        //     return x >= 0;
+        // })
+
+        // function removeNegativeNumbers(arr, callback) {
+        //     const myNewArray = [];
+        //     for (const y of arr) {
+        //         if (callback(y)) {
+        //             myNewArray.push(y)
+        //         }
+        //     }
+        //     return myNewArray;
+        // }
+
+        // // setTimeout(()=>console.log(positiveNumbers), 2 * 1000)
+
+        // setTimeout(callMyName, 1000);
+
+        // function callMyName() {
+        //     document.querySelector('.loader').style.display = 'none'
+        //     console.log('Ramoni jaguda');
+        // }
+
+
+        // function addZero(num){
+        //     let newNum = '';
+        //     if(num < 10){
+        //         newNum = '0' + num;
+        //     }else{
+        //         newNum = num;
+        //     }
+        //     return newNum;
+        // }
+        // function time() {
+        //     const date = new Date();
+
+        //     const hours = date.getHours();
+        //     const minutes = date.getMinutes();
+        //     const seconds = date.getSeconds();
+
+        //     document.querySelector('#time').innerHTML = addZero(hours) + ":" + addZero(minutes) + ":" + addZero(seconds);
+        // }
+        // setInterval(time, 1000)
+
+
+        function getFile(callback){
+            let req = new XMLHttpRequest();
+            req.open('GET', './mini-projects/todo/index.html');
+            req.onload = function(){
+                console.log(req);
+                if(req.status == 200){
+                    callback(req.responseText);
+                }else{
+                    callback(req.status +''+req.statusText);
+                }
+            }
+            req.send();
+        }
+
+        getFile(function(value){
+            document.write(value)
+        });
+    </script>
+
+</body>
+
+</html>

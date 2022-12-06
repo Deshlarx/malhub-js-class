@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var name = prompt('What is your name?');
+        var age = prompt('How old are you?');
+        var color = prompt('What is your skin color?');
+        var dob = prompt('What is your date of birth?');
+
+
+        const person = {
+            name: name.search(' ') != -1 ? name.split(' ')[1] : name,
+            age: age,
+            color: color,
+            dob: dob
+        }
+
+
+        let text =
+            'Welcome ' + person?.name + ', ';
+        let otherContent = age >= 18 ? 'you are old enough to use our application' : 'too Young Please exit';
+        document.write(text += otherContent);
+    </script>
+
+
+</body>
+
+</html>

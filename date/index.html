@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const post = {
+            title: "Learning JS is fun, I like it",
+            tags: ['malhub_ng', 'devJs'],
+            location: '',
+            createdAt: '2022-10-31 22:00:50'
+        }
+        // date
+
+        // const date = new Date("2020-10-20 24:00")
+        // const date = new Date(post.createdAt)
+
+        // const date = new Date(2018, 20, 24, 10, 33, 30, 0);
+        // const date = new Date(2019, 8, 24, 10, 33, 30, 0);
+        // console.log(date)
+
+        // let msec = Date.parse("March 21, 2012");
+        // console.log(new Date(msec))
+
+
+        // get
+        const d = new Date(post.createdAt);
+
+        console.log(d.getFullYear())
+
+        // set
+        d.setFullYear("2019");
+    </script>
+</body>
+
+</html>

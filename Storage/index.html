@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // window.document.cookie = "name=kunle; expires=Tue, 06 Dec 2023 09:38:04 GMT; path=/"
+        // window.document.cookie = "age=20; expires=Tue, 06 Dec 2023 09:38:04 GMT; path=/"
+        // window.document.cookie = "name=Olakunle; expires=Tue, 06 Dec 2003 09:38:04 GMT; path=/"
+        // console.log(document.cookie);
+
+        function setCookies(cname,cValue, expDate) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expDate * 24 * 60 * 60 * 1000))
+            let exp = 'expires=' + d.toUTCString();
+            document.cookie = cname+'=' + cValue + ';' + exp + ';path=/;';
+        }
+
+        // setCookies('Tolu', 365);
+
+        function getCookies(cname) {
+            // create a vaaribale to store the cname;
+            let name = cname + '=';
+            // turning the cookies into an array
+            let cookiesArray = document.cookie.split(';');
+
+            // looping over the cookies array
+            for (let i = 0; i < cookiesArray.length; i++) {
+                let singleCookie = cookiesArray[i];
+
+                // checking if the cookies contain empty single in index of 0
+                while (singleCookie.charAt(0) === ' ') {
+                    singleCookie = singleCookie.substring(1);
+                }
+                // checking if the the single cookie contains the name
+                if (singleCookie.includes(name)) {
+                    return singleCookie.substring(name.length, singleCookie.length);
+                }
+            }
+            return '';
+        }
+
+        function checkCookies() {
+            let user = getCookies('username');
+
+            if (user != '') {
+                console.log('Welcome again!' + user);
+            } else {
+                user = prompt("Please enter your name", '');
+                if (user != '' && user != null) {
+                    setCookies('username',user, 365)
+                }
+            }
+        }
+
+        checkCookies()
+        setCookies('age','45', 365)
+
+    </script>
+</body>
+
+</html>

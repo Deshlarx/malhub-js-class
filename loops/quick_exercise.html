@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const priceList = [
+            {
+                name: 'Rice',
+                price: 1500
+            },
+            {
+                name: 'Plaintain',
+                price: 100
+            },
+            {
+                name: 'Shawarma',
+                price: 2500
+            },
+            {
+                name: 'Beans and Rice',
+                price: 3500
+            },
+            {
+                name: 'Koko',
+                price: 300
+            },
+        ]
+
+        // for loop
+
+        // for (let i = 0; i < priceList.length; i++) {
+        //     let text =
+        //         'Product-Name: ' + '<b>' + priceList[i].name + '</b>' + ' Product-price: ' + '<b>' + priceList[i].price + '</b>' + '<br/>';
+
+        //     document.write(text + '<br/>');
+        // }
+
+        // for in
+        // for (let x in priceList) {
+        //     let text =
+        //         'Product-Name: ' + '<b>' + priceList[x].name + '</b>' + ' Product-price: ' + '<b>' + priceList[x].price + '</b>' + '<br/>';
+
+        //     document.write(text + '<br/>');
+        // }
+
+        // for of
+        // for (let item of priceList) {
+        //     let text =
+        //         'Product-Name: ' + '<b>' + item.name + '</b>' + ' Product-price: ' + '<b>' + item.price + '</b>' + '<br/>';
+
+        //     document.write(text + '<br/>');
+        // }
+
+        // foreach
+        // priceList.forEach(function (value) {
+        //     let text =
+        //         'Product-Name: ' + '<b>' + value.name + '</b>' + ' Product-price: ' + '<b>' + value.price + '</b>' + '<br/>';
+
+        //     document.write(text + '<br/>');
+        // })
+
+        // map
+        priceList.map(function (value) {
+            let text =
+                'Product-Name: ' + '<b>' + value.name + '</b>' + ' Product-price: ' + '<b>' + value.price * 2 + '</b>' + '<br/>';
+
+            document.write(text + '<br/>');
+        })
+        console.log(priceList);
+    </script>
+</body>
+
+</html>

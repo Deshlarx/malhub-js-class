@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // var age = 28;
+
+      // if(age >= 18){
+      //     console.log('I am an adult');
+      // }
+
+      // ternary operator
+      // console.log(age > 18 ? 'I am an adult' : 'I am still a kid')
+
+      // const car = {model:'2022',color:'white'}
+
+      // console.log(car?.name) // optional chaining
+
+      // const d = new Date();
+
+      // // const hour = 22;
+      // const hour = d.getHours();
+
+      // console.log({ hour: hour });
+      // if (hour <= 10) {
+      //     console.log('Good Morning');
+      // } else if (hour < 16) {
+      //     console.log('Good Afternoon')
+      // } else if (hour < 20) {
+      //     console.log('Good Evening')
+      // }else{
+      //     console.log('Good Night')
+      // }
+
+      // const user = {
+      //     username: 'Kunle',
+      //     age: 10,
+      //     gender: 'Male',
+      //     isLogged: true,
+      // }
+
+      // if (user.isLogged && user.age >= 18) {
+      //     console.log(user.username + ' , Welcome Back');
+      // } else if (user.isLogged && (user.age < 10 || user.gender.toLowerCase() === 'female')) {
+      //     console.log(user.username + ' , Not old enough to user 18+ app');
+      // } else {
+      //     console.log('Fail to authenticate');
+      // }
+
+      // const content =
+      //     user.isLogged && user.age >= 18 ? user.username + ', Welcome Back' : user.isLogged && (user.age < 10 || user.gender == 'Male') ? user.username + ', Not old enpugh to use 18+ app' : 'Fail to authenticate'
+      //     console.log(content);
+
+        const month = new Date().getMonth();
+        console.log(month);
+           if (month === 0) {
+          console.log("January");
+        } else if (month === 1) {
+          console.log("February");
+        } else if (month === 2) {
+          console.log("March");
+        } else if (month === 3) {
+          console.log("April");
+        } else if (month === 4) {
+          console.log("May");
+        } else if (month === 5) {
+          console.log("June");
+        } else if (month === 6) {
+          console.log("July");
+        } else if (month === 7) {
+          console.log("August");
+        } else if (month === 8) {
+          console.log("September");
+        } else if (month === 9) {
+          console.log("October");
+        } else if (month === 10) {
+          console.log("November");
+        } else if (month === 11) {
+          console.log("December");
+        }
+
+      const day = new Date().getDay();
+      console.log(day);
+      if (day === 0) {
+        console.log("It's Sunday, time to relax!");
+      } else if (day === 1) {
+        console.log("Happy Monday!");
+      } else if (day === 2) {
+        console.log("It's Tuesday. You got this!");
+      } else if (day === 3) {
+        console.log("Mid-Week already!");
+      } else if (day === 4) {
+        console.log("Just one more day 'til the weekend!");
+      } else if (day === 5) {
+        console.log("Happy Friday!");
+      } else if (day === 6) {
+          console.log("Have a wonderful Saturday!");
+      }
+    </script>
+  </body>
+</html>

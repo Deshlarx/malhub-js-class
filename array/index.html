@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // arrays are special variables use for storing large amount of value.
+
+        // const cars = ["Toyota", "BMW", "Fold"];
+
+        // cars[0] = "Corrola"
+        // // console.log(cars[2]);// to access array values
+
+        // console.log(cars);
+
+
+        const per = [];
+
+        per[0] = 'Kunle';
+        per[1] = 'Tayo';
+        per[2] = 'Ope';
+
+
+        const person = [];
+
+        person[0] = {
+            name: 'Kunle Jaye',
+            age: 20,
+            studying: false
+        }
+        person[1] = function getPerson() { console.log("My person is up") }
+        person[2] = per;
+
+        person.push("Added")
+
+        person[10] = "Going"
+        // console.log(person[10])
+
+
+
+        // Array Method
+        // console.log(person.toString());// tostring method 
+        // console.log(per.join(' + ')) //join method
+
+        // console.log(per.pop())// pop method to remove the last element in an array
+        // console.log(per.push("Shola"))// push method to add the last element in an array
+
+        // console.log(per.shift())// shift method remove the first element in an array
+        // console.log(per.unshift("Kolawole"))// unshift method add the first element in an array
+
+        // per[1] = ""
+        // delete per[1] //delet method
+
+        // const arr =  person.concat(per) // concat method adding two or more arrays together
+        // console.log(arr)
+
+
+        // slicing and splicing
+        // per.splice(1, 0, "Tolu", "Pelu") // splice method is use to add a new element to our array in a give position
+        // per.splice(0,1) // using splice to remove an element from array 
+
+        // per.slice(0,1) // slice method return a new array of a given parameter
+
+
+        //sorting 
+
+        // per.sort() // sorting array element in an assending order
+        // per.reverse() // sorting array element in an descending order
+        // console.log(per);
+
+
+        // const points = [40, 100, 1, 5, 5, 25, 10];
+        // points.sort(function (a, b) {
+        //     return a - b;
+        // })// ascending order sorting
+        // points.sort(function (a, b) {
+        //     return b - a;
+        // })// descending order sorting
+
+
+
+        // const people = [
+        //     {
+        //         name: 'Olawale',
+        //         age: 29,
+        //         dob:2000
+        //     },
+        //     {
+        //         name: 'Oluwale',
+        //         age: 9,
+        //         dob:2010
+        //     },
+        //     {
+        //         name: 'Adewale',
+        //         age: 35,
+        //         dob:1990
+        //     },
+        //     {
+        //         name: 'Kolawale',
+        //         age: 70,
+        //         dob:1800
+        //     },
+        // ]
+
+
+        // people.sort(function(a, b){
+        //     return b.dob - a.dob
+        // })
+
+
+        // arrayiteration
+        // using foreach method
+        const points = [40, 100, 1, 5, 5, 25, 10];
+
+        let text = "";
+
+        // points.forEach(function(value, index, array){
+        //     text += "This is value " +value + '. Next Line. \n'
+        // })
+
+        // points.forEach(function(value){
+        //     text += value + '\n'
+        // })
+
+
+        // Map method
+        // points.map(myFunction);
+        // function myFunction(value, index){
+        //     text += value * 5 + ' index of '+ index +'\n'
+        // }
+        // var mapData =  points.map(myFunction);
+        // function myFunction(value, index){
+        //     return value * 5
+        // }
+
+
+        // Filter method
+        // var filteredData =  points.filter(function(value){
+        //      return value <= 5
+        //  })
+        //   console.log(filteredData);
+
+
+        // reduce method work from left to right
+        // const reduceData = points.reduce(function(total, value){
+        //     return total + value;
+        // })
+
+        // reduceRight works from right to left
+        // const reduceData = points.reduceRight(function(total, value){
+        //     return total + value;
+        // })
+        // console.log(reduceData)
+
+
+    </script>
+</body>
+
+</html>

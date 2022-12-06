@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="this.innerHTML ='Hello'"> call addnum</button>
+
+    <script>
+
+        const person = {
+            fullName: function () {
+                return this.firstName + ' ' + this.lastName;
+            }
+        }
+        const person1 = {
+            firstName: ' Kunle',
+            lastName: ' Olawale',
+            age: 10
+        }
+
+        // console.log(person.fullName.call(person1));
+        // console.log(person)
+
+        // person.name = ''
+
+        // function addNum(a, b) {
+        //     console.log(a, b)
+        // }
+        // addNum({ a: 10, b: 2 })
+        // for (const key in person1) {
+        //     if (Object.hasOwnProperty.call(person1, key)) {
+        //         const element = person1[key];
+
+        //         document.write(element);
+        //     }
+        // }
+
+        // document.write(Object.values(person1))
+        // document.write(JSON.stringify(person1))
+
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const people = [
+            { name: 'Ola', age: 20 },
+            { name: 'Ayo', age: 20 },
+            { name: 'AyoMide', age: 20 },
+            { name: 'Funmi', age: 20 },
+            { name: 'Tayo', age: 20 },
+        ]
+
+        for (let i = 0; i < people.length; i++) {
+            const per = people[i];
+            console.log(new Person(per.name, per.age));
+            
+        }
+        const person2 = new Person('Kunle', 10);
+    </script>
+
+</body>
+
+</html>

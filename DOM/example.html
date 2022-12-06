@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 50%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .list-item {
+            padding: 2em 1em;
+            background-color: gray;
+            margin-top: 1em;
+            list-style-type: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Price List:</h1>
+    <div id="list-parent"></div>
+
+
+    <script>
+        const listParent = document.getElementById('list-parent');
+
+        const priceList = [
+            {
+                name: 'Rice',
+                price: 1200,
+            },
+            {
+                name: 'Dodo',
+                price: 200,
+            },
+            {
+                name: 'Ponmo',
+                price: 1000,
+            },
+            {
+                name: 'Spaghetti',
+                price: 2200,
+            },
+        ]
+
+        let contentContainer = '<ul>';
+
+        for (let list of priceList) {
+            let innnerContent =
+                '<li class="list-item">ProductName: ' + list.name + '. ' + 'ProductPrice ' + list.price + '.</li>';
+            contentContainer += innnerContent;
+            listParent.innerHTML = contentContainer;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

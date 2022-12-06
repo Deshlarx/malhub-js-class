@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const cars = ['Volvo', 'Toyota', 'Honda', 'Benz'];
+        // let text = '';
+
+
+        // // text += cars[0] + ' ';
+        // // text += cars[1] + ' ';
+        // // text += cars[2] + ' ';
+        // // text += cars[3] + ' ';
+
+
+        // for (let i = 0; i < cars.length; i++) {
+        //     text += i + cars[i] +'\n'
+        // }
+        // console.log(text);
+
+
+        // for(let index = 0; index <= 5; index++){
+        //     console.log('This is new value ' + index + '\n')
+        // }
+
+        // for(let i = 0, len = cars.length, text = ''; i < len; i++){
+        //     console.log(cars[i]);
+        // }
+
+        // let i = 0;
+        // let carLength = cars.length;
+
+        // for(;i < carLength; i++){
+        //     console.log('Omitted '+ cars[i])
+        // }
+
+
+
+
+        const number = [14, 15, 48, 92, 74, 69, 56, 80, 99, 33, 5, 9, 999, 87, 52, 32, 450, 1111, 78, 90];
+        const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        let index = Math.floor(Math.random() * number.length);
+
+        // console.log(index);
+
+        // console.log(number[index]);
+
+
+        let text = ''
+
+        for (let i = 0; i < alphabet.length - 2; i++) {
+            text += alphabet[Math.floor(Math.random() * alphabet.length)];
+            // console.log());
+        }
+        console.log(text + number[index])
+    </script>
+</body>
+
+</html>

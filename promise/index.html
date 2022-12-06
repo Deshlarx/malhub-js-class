@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // let newPromise = new Promise(function (isSuccess, isFailure) {
+        //     let x = 1;
+
+        //     if (x === 0) {
+        //         isSuccess("Result is Ok")  // todo: resolve
+        //     } else {
+        //         isFailure("Unexpected Error occur: x !== 0"); // todo: reject
+        //     }
+        // })
+
+        // newPromise.then(
+        //     function (value) {
+        //         console.log(value)
+        //     },
+        //     function (error) {
+        //         console.error(error);
+        //     }
+        // );
+
+        let newPromise = new Promise(function (resolve, reject) {
+            let req = new XMLHttpRequest();
+            req.open('GET', 'https://api.malhub.org/index.js');
+
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response)
+                } else {
+                    reject(req.status);
+                }
+            }
+
+            req.send();
+        })
+
+        newPromise.then(function (value) {
+            document.write(value);
+        }).catch(function (err) { document.write(err) });
+    </script>
+</body>
+
+</html>

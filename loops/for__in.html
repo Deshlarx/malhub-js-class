@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const person = {
+            firstName: 'Kunle',
+            lastName: 'Olawale',
+            age: 20,
+            married: false,
+            employmentStatus: 'Self Employed'
+        }
+
+        // for in
+
+        //syntax
+        // for(key in Object){
+        //     // code exceted
+        // }
+
+        let text = "";
+        // for(key in person){
+        //     text += person[key] + ' ';
+        //     // console.log(person[key]);
+        // }
+        // console.log(text)
+
+        const ages = [1, 5, 6, 7, 90];
+
+        // for(let x in ages){
+        //     console.log(ages[x]);
+        // }
+
+        ages.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            text += (value + index) * array.length + '\n'; 
+        }
+        console.log(text)
+
+
+        //1+0 = 1 * 5 = 5;
+        //5+1 = 6 * 5 = 30;
+    </script>
+
+</body>
+
+</html>

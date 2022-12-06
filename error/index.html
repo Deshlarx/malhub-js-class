@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="demo" type="text" minlength="5" maxlength="10" step="1">
+        <button>test</button>
+    </form>
+    
+
+    <script>
+
+        try{
+            let x = true;
+            if(x != 2 || x != '2') {
+                throw 'x is unknown';
+            }
+            console.log(x);
+        }catch(error){
+            console.error(error)
+        }
+
+        console.log(2)
+    </script>
+
+</body>
+</html>
