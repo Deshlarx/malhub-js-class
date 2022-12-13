@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- font icons -->
+  <link rel="stylesheet" href="themify-icons/css/themify-icons.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">#WeekeNDVibes </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top_menu " id="sign-in-button">
+          <a href="./sign-in.html"><button class="btn btn-primary" type="submit" id="nav_btn">
+              Sign In
+            </button></a>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top_menu " id="logout-button">
+          <button class="btn btn-danger" type="button" id="nav_btn">
+            logout
+          </button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 cardBg" id="postContainer">
+      </div>
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="cards">
+            <input type="text" placeholder="Search Memories" />
+            <input type="text" placeholder="Search Tags" />
+            <br />
+            <button type="btn btn-primary">Search</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="message">
+            <p>Please sign in to post a vibe and to like other's vibe</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="pagination">
+            <div class="page-left"><i class="ti-angle-left"></i></div>
+            <div class="number"><span>1</span></div>
+            <div class="page-right"><i class="ti-angle-right"></i></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="loading">
+            <p>Loading Some WeekeNDVibe...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/post.js" type="module"></script>
+</body>
+
+</html>
